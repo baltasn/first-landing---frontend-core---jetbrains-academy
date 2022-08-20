@@ -1,9 +1,4 @@
 
-/*#79B4B7*/
-/*#FEFBF3*/
-/*#F8F0DF*/
-/*#9D9D9D*/
-
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +9,8 @@ body {
   line-height: 1.5;
   max-height: 100vh;
   background-color: #c8c8c8;
+  width:800px;
+  /*margin: auto;*/
 }
 
 header {
@@ -28,8 +25,6 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.25rem 1rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 nav > a{
   margin-top: auto;
@@ -39,6 +34,7 @@ nav > a{
 
 main {
   min-height: 60vh;
+  width: 800px;
 }
 
 footer {
@@ -83,8 +79,7 @@ add top and bottom margin of 1rem.
   display: flex;
   flex-wrap: wrap;
   margin: 1rem auto;
-  width: 800px;
-  /*width: 100%;*/
+  width: 100%;
 }
 
 /*
@@ -169,3 +164,71 @@ attributes with the values of your liking.
   border-radius: 21px 21px 0 0;
 }
 
+/* 5/6 FOOTER*/
+
+/*change the background color to rgba(0, 0, 0, 0.85).*/
+/*As for the style of the footer, the maximum width is 100%, and
+the padding should be 1rem on the right and left, 3rem on the
+top and bottom. Also, the left and right margins must be adjusted
+automatically. For the contact div, set the display to flex with
+wrapped items and justify the content inside with a space in-between.*/
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  max-width: 100%;
+  padding: 3rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*For the container div with the id of contact-col1 – the maximum width
+is 100%, and the padding should be 1rem on the left and right. Also,
+the right and left margins must be adjusted automatically. Set the
+display to flex with wrapped items, the direction is column.*/
+#contact-col1 {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/*For the link tag that wraps the logo image – the top and bottoms
+margins must be adjusted automatically. The image should have the same
+ constraints as in the second stage.*/
+#contact-col1 > a {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*For the div wrapping the rest of the links – the top and bottoms
+margins must be adjusted automatically. The first two links in this
+div have a right margin of 1rem.*/
+#contact-col1 > div >a:nth-child(1),#contact-col1 > div > a:nth-child(2)  {
+  margin-right: 1rem;
+}
+
+/*The links should have a color of #6c757d without any text decoration.*/
+#contact-col1 > div > a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+/*The paragraph tag after the div has a color of #6c757d.*/
+#contact-col1 >p {
+  color: #6c757d;
+}
+
+/* VALUES REQUIRED BY TESTS */
+#footer_link_logo {
+  color: rgb(108, 117, 125);
+  text-decoration: none;
+}
