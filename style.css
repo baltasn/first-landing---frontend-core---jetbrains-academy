@@ -7,12 +7,11 @@
 
 body {
   font-family: sans-serif;
-  margin: 0;
   line-height: 1.5;
   max-height: 100vh;
   background-color: #c8c8c8;
-  width:800px;
-  /*margin: auto;*/
+  max-width:900px;
+  margin: auto;
 }
 
 header {
@@ -37,11 +36,6 @@ nav > a{
 
 main {
   min-height: 60vh;
-}
-
-footer {
-  min-height: 30vh;
-  background-color: #9D9D9D;
 }
 
 #home {
@@ -72,11 +66,6 @@ footer {
   padding: 0.375rem 0.75rem;
 }
 
-/*
-For the style of the product div, the display should be
-flex with wrapped items inside. So, set the width at 100% ,
-add top and bottom margin of 1rem.
-*/
 #product {
   display: flex;
   flex-wrap: wrap;
@@ -84,18 +73,6 @@ add top and bottom margin of 1rem.
   width: 100%;
 }
 
-/*
-For the style of the first column div, set the background color
-#000 and the color of the text #fff. The flex value should be 1,
-the text should be centred, any overflow should be hidden. The
-right margin is 1rem, top, right and left of the padding is 3rem.
-*/
-
-/*
-The second column div has the same style, without the text color
-and right-margin values. Also, the background color of it will
-be #f8f9fa.
-*/
 #product > div {
   flex: 1;
   overflow: hidden;
@@ -112,24 +89,12 @@ be #f8f9fa.
   margin-right: 1rem;
 }
 
-/*
-The div container with the content inside the column divs will
-have a margin top and bottom of 1rem and a padding of 1rem.
-*/
 #product > div > div:nth-of-type(1){
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
 }
 
-/*
-The div container with the image inside the column divs contains
-the left and right margins that are automatically adjusted;
-the width is 80%, and the height is 400px. The border radius
-is 21px on the top and right, 0px on the bottom and left. Also,
-the first of these divs will have a background color of #f8f9fa,
-and the second one is #000.
-*/
 #product > div > div:nth-of-type(2){
   border-radius: 21px 21px 0 0;
   height: 400px;
@@ -145,38 +110,21 @@ and the second one is #000.
   background-color: #000;
 }
 
-/*
-For the paragraph tags inside the content divs, the font size
-is 1.25rem; the font weight is 300.
-*/
 #product > div p {
   font-size: 1.25rem;
   font-weight: 300;
 }
 
-/*
-The images should have a width of 80%, a height of 400px. The
-border radius is 21px on the top and right, 0px on the bottom
-and left. In addition, they should have the src, title and alt
-attributes with the values of your liking.
-*/
 #product > div img {
   width: 80%;
   height: 400px;
   border-radius: 21px 21px 0 0;
 }
 
-/* 5/6 FOOTER*/
-
-/*change the background color to rgba(0, 0, 0, 0.85).*/
-/*As for the style of the footer, the maximum width is 100%, and
-the padding should be 1rem on the right and left, 3rem on the
-top and bottom. Also, the left and right margins must be adjusted
-automatically. For the contact div, set the display to flex with
-wrapped items and justify the content inside with a space in-between.*/
 footer {
   background-color: rgba(0, 0, 0, 0.85);
   max-width: 100%;
+  min-height: 30vh;
   padding: 3rem 1rem;
   margin: 0 auto;
 }
@@ -188,10 +136,6 @@ footer {
   justify-content: space-between;
 }
 
-/*For the container div with the id of contact-col1 – the maximum width
-is 100%, and the padding should be 1rem on the left and right. Also,
-the right and left margins must be adjusted automatically. Set the
-display to flex with wrapped items, the direction is column.*/
 #contact-col1 {
   max-width: 100%;
   padding: 0 1rem;
@@ -201,17 +145,11 @@ display to flex with wrapped items, the direction is column.*/
   flex-direction: column;
 }
 
-/*For the link tag that wraps the logo image – the top and bottoms
-margins must be adjusted automatically. The image should have the same
- constraints as in the second stage.*/
 #footer_link_logo {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/*For the div wrapping the rest of the links – the top and bottoms
-margins must be adjusted automatically. The first two links in this
-div have a right margin of 1rem.*/
 #contact-col1 > div >a:nth-child(1),#contact-col1 > div > a:nth-child(2)  {
   margin-right: 1rem;
 }
@@ -221,22 +159,15 @@ div have a right margin of 1rem.*/
   margin-bottom: 10px;
 }
 
-/*The links should have a color of #6c757d without any text decoration.*/
 #contact-col1  a {
   color: #6c757d;
   text-decoration: none;
 }
 
-/*The paragraph tag after the div has a color of #6c757d.*/
 #contact-col1 > p {
   color: #6c757d;
 }
 
-/* 6/6 CONTACT FORM*/
-
-/*For the style of the second div container inside the contact div,
-the maximum width is 100%; add a padding of 1rem on the left and right.
-Also, the left and right margins should be adjusted automatically.*/
 #contact-col2 {
   max-width: 100%;
   padding-left: 1rem;
@@ -244,9 +175,6 @@ Also, the left and right margins should be adjusted automatically.*/
   margin: 0 auto;
 }
 
-/*For the heading tag inside form tag, set the top margin at 0 and the
-bottom at 0.5rem. The font weight should be 500, the line height should
-be 1.2, the font size is 1.25rem, choose #f8f9fa as the color.*/
 #contact-col2 > form > h5{
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -256,27 +184,16 @@ be 1.2, the font size is 1.25rem, choose #f8f9fa as the color.*/
   color: #f8f9fa;
 }
 
-/*Both of the divs wrapping the inputs and labels should have a bottom
-margin of 1rem.*/
-
 #contact-col2 > form > div {
   margin-bottom: 1rem;
 }
 
-/*The label for the email is a display block, and a bottom margin is
-0.5rem. The color should be #f8f9fa.*/
 label[for="email"] {
   display: block;
   margin-bottom: .5rem;
   color: #f8f9fa;
 }
 
-/*The email input has a width of 100%, the top and bottom paddings are
-0.375rem, and the left and right padding have 0.75rem, font size – 1rem,
-the height of the lines should be 1.5, the color is #212529, the borders
-are solid lines with the #ced4da color, 1px in thickness. The border
-radius is set at 0.25rem. Add the following placeholder text:
-you@example.com.*/
 #email{
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -287,19 +204,9 @@ you@example.com.*/
   border-radius: 0.25rem;
 }
 
-/*The label for the checkbox should have a color of #f8f9fa. Both of
-the inputs should be required to fill in.*/
 label[for="checkbox"] {
   color: #f8f9fa;
 }
-
-/*The submit button should have a width of 100%, the display of it
-should be as a block on the same line, the borders are solid lines
-with #6c757d color in 1px thickness. There should be no text
-decoration. The border radius is set at 0.25rem . Set the font size
-at 1rem, add top and bottom paddings of 0.375rem; left and right
-paddings of 0.75rem. Set the mouse cursor as pointer. Set the color
-as #fff, background color as #6c757d.*/
 
 #contact-col2 button {
   width: 100%;
@@ -312,20 +219,6 @@ as #fff, background color as #6c757d.*/
   padding: 0.375rem 0.75rem;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* FOR THE TESTS */
-
-#contact-col1 {
-  margin-right: 70.5547px;
-  margin-left:  70.5547px;
-}
-#contact-col2 {
-  margin-right: 70.5547px;
-  margin-left:  70.5547px;
-}
-#email {
-  width: 227.906px;
 }
 
 
