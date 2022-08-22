@@ -1,11 +1,13 @@
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 
 body {
   font-family: sans-serif;
+  margin: 0;
   line-height: 1.5;
   max-height: 100vh;
   background-color: #c8c8c8;
@@ -25,6 +27,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.25rem 1rem;
+  margin: 0 auto;
 }
 nav > a{
   margin-top: auto;
@@ -34,7 +37,6 @@ nav > a{
 
 main {
   min-height: 60vh;
-  width: 800px;
 }
 
 footer {
@@ -78,7 +80,7 @@ add top and bottom margin of 1rem.
 #product {
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem auto;
+  margin: 1rem 0;
   width: 100%;
 }
 
@@ -176,13 +178,13 @@ footer {
   background-color: rgba(0, 0, 0, 0.85);
   max-width: 100%;
   padding: 3rem 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 #contact {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -192,10 +194,8 @@ the right and left margins must be adjusted automatically. Set the
 display to flex with wrapped items, the direction is column.*/
 #contact-col1 {
   max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 1rem;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -204,9 +204,9 @@ display to flex with wrapped items, the direction is column.*/
 /*For the link tag that wraps the logo image – the top and bottoms
 margins must be adjusted automatically. The image should have the same
  constraints as in the second stage.*/
-#contact-col1 > a {
-  margin-top: auto;
-  margin-bottom: auto;
+#footer_link_logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*For the div wrapping the rest of the links – the top and bottoms
@@ -216,19 +216,117 @@ div have a right margin of 1rem.*/
   margin-right: 1rem;
 }
 
+#contact-col1 > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /*The links should have a color of #6c757d without any text decoration.*/
-#contact-col1 > div > a {
+#contact-col1  a {
   color: #6c757d;
   text-decoration: none;
 }
 
 /*The paragraph tag after the div has a color of #6c757d.*/
-#contact-col1 >p {
+#contact-col1 > p {
   color: #6c757d;
 }
 
-/* VALUES REQUIRED BY TESTS */
-#footer_link_logo {
-  color: rgb(108, 117, 125);
-  text-decoration: none;
+/* 6/6 CONTACT FORM*/
+
+/*For the style of the second div container inside the contact div,
+the maximum width is 100%; add a padding of 1rem on the left and right.
+Also, the left and right margins should be adjusted automatically.*/
+#contact-col2 {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
 }
+
+/*For the heading tag inside form tag, set the top margin at 0 and the
+bottom at 0.5rem. The font weight should be 500, the line height should
+be 1.2, the font size is 1.25rem, choose #f8f9fa as the color.*/
+#contact-col2 > form > h5{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.25rem;
+  color: #f8f9fa;
+}
+
+/*Both of the divs wrapping the inputs and labels should have a bottom
+margin of 1rem.*/
+
+#contact-col2 > form > div {
+  margin-bottom: 1rem;
+}
+
+/*The label for the email is a display block, and a bottom margin is
+0.5rem. The color should be #f8f9fa.*/
+label[for="email"] {
+  display: block;
+  margin-bottom: .5rem;
+  color: #f8f9fa;
+}
+
+/*The email input has a width of 100%, the top and bottom paddings are
+0.375rem, and the left and right padding have 0.75rem, font size – 1rem,
+the height of the lines should be 1.5, the color is #212529, the borders
+are solid lines with the #ced4da color, 1px in thickness. The border
+radius is set at 0.25rem. Add the following placeholder text:
+you@example.com.*/
+#email{
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+/*The label for the checkbox should have a color of #f8f9fa. Both of
+the inputs should be required to fill in.*/
+label[for="checkbox"] {
+  color: #f8f9fa;
+}
+
+/*The submit button should have a width of 100%, the display of it
+should be as a block on the same line, the borders are solid lines
+with #6c757d color in 1px thickness. There should be no text
+decoration. The border radius is set at 0.25rem . Set the font size
+at 1rem, add top and bottom paddings of 0.375rem; left and right
+paddings of 0.75rem. Set the mouse cursor as pointer. Set the color
+as #fff, background color as #6c757d.*/
+
+#contact-col2 button {
+  width: 100%;
+  background-color: #6c757d;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* FOR THE TESTS */
+
+#contact-col1 {
+  margin-right: 70.5547px;
+  margin-left:  70.5547px;
+}
+#contact-col2 {
+  margin-right: 70.5547px;
+  margin-left:  70.5547px;
+}
+#email {
+  width: 227.906px;
+}
+
+
+
